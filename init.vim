@@ -40,6 +40,9 @@ Plug 'haya14busa/incsearch.vim'
 
 call plug#end()
 
+inoremap jj <ESC>
+let mapleader = "n"
+
 map <F2> :NERDTreeToggle<CR>
 
 " Ejecutar comandos con alt-enter :Commands
