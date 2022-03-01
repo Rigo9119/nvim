@@ -24,27 +24,34 @@ set expandtab  " Insertar espacios en lugar de <Tab>s
 set ignorecase  " Ignorar mayúsculas al hacer una búsqueda
 set smartcase  " No ignorar mayúsculas si la palabra a buscar contiene mayúsculas
 set spelllang=en,es  " Corregir palabras usando diccionarios en inglés y español
-set termguicolors  " Activa true colors en la terminal
-:
+set termguicolors  " Activa true colors en la terminal"
+set termguicolors
+set background=dark " or light if you want light mode
 
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'tpope/vim-surround'  " Es buena idea agregar una descripción del plugin
 Plug 'scrooloose/nerdtree' " Explorador de archivos
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'lukas-reineke/indent-blankline.nvim' " guias de indentacion
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'haya14busa/incsearch.vim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'jiangmiao/auto-pairs'
+Plug 'luochen1990/rainbow'
+Plug 'ellisonleao/gruvbox.nvim'
 
 call plug#end()
 
+colorscheme gruvbox
 inoremap jj <ESC>
-let mapleader = "n"
+nnoremap <SPACE> <Nop>
+let mapleader = " "
 
 map <F2> :NERDTreeToggle<CR>
 
+let g:rainbow_active = 1
 " Ejecutar comandos con alt-enter :Commands
 let g:fzf_commands_expect = 'alt-enter'
 " Guardar historial de búsquedas
@@ -53,14 +60,17 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 " Empezar a buscar presionando Ctrl + p
 nnoremap <C-p> :Files<CR>
 
-let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
-let g:airline#extensions#tabline#fnamemod = ':t'  " Mostrar sólo el nombre del archivo
-" Cargar fuente Powerline y símbolos (ver nota)
-let g:airline_powerline_fonts = 1
-
 " Maps requeridos
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 
 " Quitar resaltado luego de buscar
 let g:incsearch#auto_nohlsearch = 1
+
+lua << END
+require('lualine').setup {
+    options = {
+        theme = 'gruvbox' 
+    }
+}
+END
