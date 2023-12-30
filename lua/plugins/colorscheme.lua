@@ -1,6 +1,8 @@
 return {
   {
     "craftzdog/solarized-osaka.nvim",
+    priority = 1000,
+    lazy = false,
     -- your configuration comes here
     -- or leave it empty to use the default settings
     transparent = true, -- Enable this to disable setting the background color
