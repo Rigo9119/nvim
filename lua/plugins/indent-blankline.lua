@@ -3,7 +3,7 @@ return {
   opts = function(_, opts)
     -- Other blankline configuration here
     return require("indent-rainbowline").make_opts(opts, {
-      color_transparency = 0.7,
+      color_transparency = 0.8,
       colors = { 0x610C9F, 0x940B92, 0xDA0C81, 0xE95793 },
     })
   end,
