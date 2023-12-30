@@ -1,6 +1,13 @@
 return {
   {
     "craftzdog/solarized-osaka.nvim",
+    {
+      "LazyVim/LazyVim",
+      opts = {
+        colorscheme = "solarized-osaka",
+      },
+    },
+
     priority = 1000,
     lazy = false,
     -- your configuration comes here
