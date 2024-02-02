@@ -19,7 +19,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
     { "RaafatTurki/corn.nvim" },
-    { "rasulomaroff/reactive.nvim" },
     -- import/override with your plugins
     { "fedepujol/bracketpair.nvim" },
     { import = "plugins" },
