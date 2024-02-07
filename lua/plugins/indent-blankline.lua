@@ -6,7 +6,10 @@ local highlight = {
 return {
   "lukas-reineke/indent-blankline.nvim",
   opts = {
-    indent = { highlight = highlight, char = "" },
+    indent = {
+      highlight = highlight,
+      char = ".",
+    },
     whitespace = {
       highlight = highlight,
       remove_blankline_trail = false,
