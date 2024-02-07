@@ -6,10 +6,12 @@ return {
   { "sainnhe/everforest", name = "everforest" },
   { "neanias/everforest-nvim", name = "neo-forest" },
   { "folke/tokyonight.nvim" },
+  { "catppuccin/nvim", name = "catppuccin" },
+  { "Shatur/neovim-ayu", name = "ayu" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "everforest",
+      colorscheme = "gruvbox",
       priority = 1000,
       lazy = false,
       -- your configuration comes here
