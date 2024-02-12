@@ -7,11 +7,28 @@ return {
   { "neanias/everforest-nvim", name = "neo-forest" },
   { "folke/tokyonight.nvim" },
   { "catppuccin/nvim", name = "catppuccin" },
-  { "Shatur/neovim-ayu", name = "ayu" },
+  {
+    "Shatur/neovim-ayu",
+    name = "ayu",
+    opts = {
+      mirage = true,
+      overrides = {
+        Normal = { bg = "None" },
+        ColorColumn = { bg = "None" },
+        SignColumn = { bg = "None" },
+        Folded = { bg = "None" },
+        FoldColumn = { bg = "None" },
+        CursorLine = { bg = "None" },
+        CursorColumn = { bg = "None" },
+        WhichKeyFloat = { bg = "None" },
+        VertSplit = { bg = "None" },
+      },
+    },
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "ayu",
       priority = 1000,
       lazy = false,
       -- your configuration comes here
