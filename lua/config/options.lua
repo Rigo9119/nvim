@@ -6,3 +6,4 @@ vim.opt.colorcolumn = "80"
 vim.opt.wrap = true
 vim.opt.textwidth = 80
 vim.opt.foldmethod = "syntax"
+vim.opt.scrolloff = 10
