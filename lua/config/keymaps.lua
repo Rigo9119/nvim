@@ -4,5 +4,5 @@
 local options = { noremap = true, silent = true }
 
 vim.api.nvim_set_keymap("i", "jj", "<Esc>", options)
-vim.api.nvim_set_keymap("n", "ww", ":w<CR>", options)
+vim.api.nvim_set_keymap("n", "zw", ":w<CR>", options)
 vim.api.nvim_set_keymap("n", "vv", "<C-v>", options)
