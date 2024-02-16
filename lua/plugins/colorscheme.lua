@@ -7,28 +7,22 @@ return {
   { "neanias/everforest-nvim", name = "neo-forest" },
   { "folke/tokyonight.nvim" },
   { "catppuccin/nvim", name = "catppuccin" },
+  { "Shatur/neovim-ayu", name = "ayu" },
   {
-    "Shatur/neovim-ayu",
-    name = "ayu",
-    opts = {
-      mirage = true,
-      overrides = {
-        Normal = { bg = "None" },
-        ColorColumn = { bg = "None" },
-        SignColumn = { bg = "None" },
-        Folded = { bg = "None" },
-        FoldColumn = { bg = "None" },
-        CursorLine = { bg = "None" },
-        CursorColumn = { bg = "None" },
-        WhichKeyFloat = { bg = "None" },
-        VertSplit = { bg = "None" },
-      },
-    },
+    "ribru17/bamboo.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("bamboo").setup({
+        -- optional configuration here
+      })
+      require("bamboo").load()
+    end,
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "ayu",
+      colorscheme = "gruvbox",
       priority = 1000,
       lazy = false,
       -- your configuration comes here
