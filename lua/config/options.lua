@@ -35,3 +35,4 @@ vim.opt.textwidth = 80
 vim.opt.foldmethod = "syntax"
 vim.opt.scrolloff = 15
 vim.opt.linebreak = true
+vim.opt.cursorline = true
